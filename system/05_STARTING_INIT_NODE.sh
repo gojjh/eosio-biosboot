@@ -9,7 +9,10 @@ WALLET_PWD="$( jq -r '.WALLET_PWD' "../.conf" )"
 
 ./cleos.sh wallet unlock --password $WALLET_PWD
 
-./cleos.sh system newaccount eosio $INIT_ACCOUNT $INIT_PUB_KEY $INIT_PUB_KEY --stake-net "1.0000 EOS" --stake-cpu "1.0000 EOS" --buy-ram "1.0000 EOS"  -p eosio
-./cleos.sh system regproducer $INIT_ACCOUNT $INIT_PUB_KEY 
+# ./cleos.sh system newaccount eosio $INIT_ACCOUNT $INIT_PUB_KEY $INIT_PUB_KEY --stake-net "1.0000 EOS" --stake-cpu "1.0000 EOS" --buy-ram "1.0000 EOS"  -p eosio
+./cleos.sh system buyram $INIT_ACCOUNT $INIT_ACCOUNT "100.0000 EOS"
+./cleos.sh system delegatebw $INIT_ACCOUNT $INIT_ACCOUNT "50000000.0000 EOS" "50000000.0000 EOS"
+./cleos.sh system regproducer $INIT_ACCOUNT $INIT_PUB_KEY
+./cleos.sh system voteproducer prods $INIT_ACCOUNT $INIT_ACCOUNT
 
 ./cleos.sh system listproducers

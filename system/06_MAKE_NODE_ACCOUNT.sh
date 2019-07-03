@@ -22,8 +22,8 @@ WALLET_PWD="$( jq -r '.WALLET_PWD' "../.conf" )"
 
 ./cleos.sh wallet unlock --password $WALLET_PWD
 
-./cleos.sh system newaccount baekseokinit $ACCOUNT_1 $PUB_KEY_1 $PUB_KEY_1 --stake-net "1000000.0000 EOS" --stake-cpu "1000000.0000 EOS" --buy-ram "1000000.0000 EOS" -p baekseokinit
-./cleos.sh system newaccount baekseokinit $ACCOUNT_2 $PUB_KEY_2 $PUB_KEY_2 --stake-net "1000000.0000 EOS" --stake-cpu "1000000.0000 EOS" --buy-ram "1000000.0000 EOS" -p baekseokinit
-./cleos.sh system newaccount baekseokinit $ACCOUNT_3 $PUB_KEY_3 $PUB_KEY_3 --stake-net "1000000.0000 EOS" --stake-cpu "1000000.0000 EOS" --buy-ram "1000000.0000 EOS" -p baekseokinit
-./cleos.sh system newaccount baekseokinit $ACCOUNT_4 $PUB_KEY_4 $PUB_KEY_4 --stake-net "1000000.0000 EOS" --stake-cpu "1000000.0000 EOS" --buy-ram "1000000.0000 EOS" -p baekseokinit
-./cleos.sh system newaccount baekseokinit $ACCOUNT_5 $PUB_KEY_5 $PUB_KEY_5 --stake-net "1000000.0000 EOS" --stake-cpu "1000000.0000 EOS" --buy-ram "1000000.0000 EOS" -p baekseokinit
+./cleos.sh system newaccount baekseokinit $ACCOUNT_1 $PUB_KEY_1 $PUB_KEY_1 --stake-net "100.0000 EOS" --stake-cpu "100.0000 EOS" --buy-ram "100.0000 EOS" -p baekseokinit
+./cleos.sh system newaccount baekseokinit $ACCOUNT_2 $PUB_KEY_2 $PUB_KEY_2 --stake-net "100.0000 EOS" --stake-cpu "100.0000 EOS" --buy-ram "100.0000 EOS" -p baekseokinit
+./cleos.sh system newaccount baekseokinit $ACCOUNT_5 $PUB_KEY_5 $PUB_KEY_5 --stake-net "100.0000 EOS" --stake-cpu "100.0000 EOS" --buy-ram "100.0000 EOS" -p baekseokinit
+./cleos.sh system newaccount baekseokinit $ACCOUNT_3 $PUB_KEY_3 $PUB_KEY_3 --stake-net "100.0000 EOS" --stake-cpu "100.0000 EOS" --buy-ram "100.0000 EOS" -p baekseokinit
+./cleos.sh system newaccount baekseokinit $ACCOUNT_4 $PUB_KEY_4 $PUB_KEY_4 --stake-net "100.0000 EOS" --stake-cpu "100.0000 EOS" --buy-ram "100.0000 EOS" -p baekseokinit
