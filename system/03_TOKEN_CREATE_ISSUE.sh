@@ -5,6 +5,8 @@ WALLET_PWD="$( jq -r '.WALLET_PWD' "../.conf" )"
 ./cleos.sh wallet unlock --password $WALLET_PWD
 
 ./cleos.sh push action eosio.token create '["eosio", "10000000000.0000 EOS"]' -p eosio.token@active
-sleep 2s
-./cleos.sh push action eosio.token issue '["'$INIT_ACCOUNT'", "1000000000.0000 EOS", "init"]' -p eosio@active
-sleep 2s
+sleep 1s
+./cleos.sh push action eosio.token issue '["eosio", "1000000000.0000 EOS", "init issue"]' -p eosio@active
+sleep 1s
+./cleos.sh push action eosio.token transfer '["eosio", "'$INIT_ACCOUNT'", "1000000000.0000 EOS", "init transfer"]' -p eosio@active
+sleep 1s

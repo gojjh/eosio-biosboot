@@ -14,5 +14,3 @@ WALLET_PWD="$( jq -r '.WALLET_PWD' "../.conf" )"
 ./cleos.sh system delegatebw $INIT_ACCOUNT $INIT_ACCOUNT "50000000.0000 EOS" "50000000.0000 EOS"
 ./cleos.sh system regproducer $INIT_ACCOUNT $INIT_PUB_KEY
 ./cleos.sh system voteproducer prods $INIT_ACCOUNT $INIT_ACCOUNT
-
-./cleos.sh system listproducers

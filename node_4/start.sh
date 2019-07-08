@@ -6,6 +6,10 @@ PRODUCER_NAME="$( jq -r '.ACCOUNT_4' "../.conf" )"
 PRIV_KEY="$( jq -r '.PRIV_KEY_4' "../.conf" )"
 PUB_KEY="$( jq -r '.PUB_KEY_4' "../.conf" )"
 
+if [ ! -d $DATADIR ]; then
+    mkdir -p $DATADIR;
+fi
+
 ./stop.sh
 echo -e "Starting Nodeos \n";
 
